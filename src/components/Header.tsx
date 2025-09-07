@@ -17,10 +17,12 @@ interface MenuItem {
   href: string;
   openInNewTab?: boolean;
 }
+
 const menuItems: MenuItem[] = [
   { name: "Blog", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "À propos", href: "/about" },
 ];
+
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
 
