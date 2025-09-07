@@ -19,7 +19,7 @@ const Page = async (
       <>
         <SEO includeOrganization includeWebsite />
         <div className="container mx-auto px-5 mb-10">
-          <Header />
+          <Header showDescription={true} />
           <BlogPostsPreview posts={result.posts} />
           <BlogPostsPagination pagination={result.pagination} />
           <Footer />
@@ -32,7 +32,7 @@ const Page = async (
       <>
         <SEO includeOrganization includeWebsite />
         <div className="container mx-auto px-5 mb-10">
-          <Header />
+          <Header showDescription={true} />
           <div className="text-center py-20">
             <h2 className="text-2xl font-bold mb-4">Erreur de configuration</h2>
             <p className="text-muted-foreground mb-4">

@@ -126,7 +126,7 @@ const Page = async () => {
         <div className="mt-20 mb-16">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight mb-6">
-              À propos d'Herman AKUE
+              À propos d&apos;Herman AKUE
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
               Guide Touristique Professionnel certifié - Spécialiste Bénin, Togo & Ghana
@@ -185,9 +185,9 @@ const Page = async () => {
           
           {/* Call to action */}
           <div className="mt-16 text-center p-8 bg-primary/5 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Prêt pour l'aventure ?</h2>
+            <h2 className="text-2xl font-bold mb-4">Prêt pour l&apos;aventure ?</h2>
             <p className="text-lg mb-6">
-              Découvrez l'Afrique de l'Ouest authentique avec un guide passionné et expérimenté.
+              Découvrez l&apos;Afrique de l&apos;Ouest authentique avec un guide passionné et expérimenté.
             </p>
             <p className="text-muted-foreground">
               Contactez-moi pour organiser votre voyage inoubliable au Bénin, Togo ou Ghana.

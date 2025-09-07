@@ -74,30 +74,35 @@ export const Navigation: FunctionComponent = () => {
   );
 };
 
-export const Header: FunctionComponent = () => {
+export const Header: FunctionComponent<{ showDescription?: boolean }> = ({ showDescription = false }) => {
   return (
-    <section className="flex items-start justify-between mt-8 md:mt-16 mb-12">
-      <div className="flex-1">
+    <section className="mt-8 md:mt-16 mb-12">
+      {/* Header avec titre et navigation */}
+      <div className="flex items-center justify-between mb-8">
         <Link href="/">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
             {config.blog.name}
           </h1>
         </Link>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-          Retrouvez ici des conseils de voyages, les lieux emblématiques à découvrir en Afrique de l'Ouest et soyez au courant de mes réductions sur les circuits pour vos vacances en Afrique de l'Ouest. Pour réserver votre tour, veuillez visiter{" "}
-          <a
-            href="https://manos-tours.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline font-medium"
-          >
-            https://manos-tours.vercel.app/
-          </a>
-        </p>
-      </div>
-      <div className="ml-8">
         <Navigation />
       </div>
+
+      {/* Texte descriptif centré */}
+      {showDescription && (
+        <div className="text-center">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Retrouvez ici des conseils de voyages, les lieux emblématiques à découvrir en Afrique de l&apos;Ouest et soyez au courant de mes réductions sur les circuits pour vos vacances en Afrique de l&apos;Ouest. Pour réserver votre tour, veuillez visiter{" "}
+            <a
+              href="https://manos-tours.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              https://manos-tours.vercel.app/
+            </a>
+          </p>
+        </div>
+      )}
     </section>
   );
 };

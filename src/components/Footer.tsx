@@ -9,6 +9,21 @@ import { Button } from "./ui/button";
 export const Footer: FunctionComponent = () => {
   return (
     <section className="mt-8 md:mt-16 mb-12">
+      {/* Lien de réservation centré */}
+      <div className="text-center mb-8 p-6 bg-primary/5 rounded-lg">
+        <p className="text-lg font-medium mb-3">
+          Prêt à découvrir l&apos;Afrique de l&apos;Ouest ?
+        </p>
+        <Link
+          href="https://manos-tours.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+        >
+          Réserver votre voyage sur MANOS TOURS
+        </Link>
+      </div>
+
       <div className="flex items-center justify-between">
         <div className="text-sm text-muted-foreground">
           © {config.blog.copyright} {new Date().getFullYear()}
