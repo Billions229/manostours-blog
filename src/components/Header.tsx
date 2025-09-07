@@ -76,13 +76,28 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
-      <Link href="/">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
-          {config.blog.name}
-        </h1>
-      </Link>
-      <Navigation />
+    <section className="flex items-start justify-between mt-8 md:mt-16 mb-12">
+      <div className="flex-1">
+        <Link href="/">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight mb-4">
+            {config.blog.name}
+          </h1>
+        </Link>
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
+          Retrouvez ici des conseils de voyages, les lieux emblématiques à découvrir en Afrique de l'Ouest et soyez au courant de mes réductions sur les circuits pour vos vacances en Afrique de l'Ouest. Pour réserver votre tour, veuillez visiter{" "}
+          <a
+            href="https://manos-tours.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline font-medium"
+          >
+            https://manos-tours.vercel.app/
+          </a>
+        </p>
+      </div>
+      <div className="ml-8">
+        <Navigation />
+      </div>
     </section>
   );
 };
